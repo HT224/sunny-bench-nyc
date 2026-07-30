@@ -2,6 +2,8 @@
 
 Find a nearby NYC street bench that is likely to be sunny now—or over the next three hours.
 
+**Live app:** https://sunny-bench-nyc.vercel.app
+
 ## What it does
 
 - Uses the visitor's location, with Fort Greene as a privacy-friendly fallback.
