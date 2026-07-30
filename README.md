@@ -35,3 +35,18 @@ npm run check
 - OpenStreetMap map tiles.
 
 No API keys are required.
+
+## How it works
+
+```mermaid
+flowchart LR
+    U[Visitor] -->|location + forecast time| A[React app]
+    A -->|nearby seat query| D[NYC DOT Seating API]
+    A -->|hourly clouds| W[Open-Meteo]
+    A --> S[Local solar-position model]
+    D --> R[Sun-likelihood ranking]
+    W --> R
+    S --> R
+    R --> M[Map + ranked seat cards]
+    M -->|selected coordinates| G[Google Maps directions]
+```
